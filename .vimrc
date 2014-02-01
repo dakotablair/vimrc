@@ -23,5 +23,8 @@ highlight Comment term=bold
 	\ cterm=NONE ctermfg=Magenta ctermbg=NONE
 	\ gui=NONE guifg=Magenta guibg=NONE
 
+"custom commands
+command! -nargs=+ Show :set <args>?
+
 "common on the fly commands
 "setf filetype
