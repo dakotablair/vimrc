@@ -1,0 +1,9 @@
+# Dakota's `.vimrc` #
+
+My VIM customizations learned over time, collected and versioned.
+
+## Sessions ##
+
+Sessions are really useful. I like to make a session for any project I am
+working in with `mks! .vim` in the project root directory. When I return to the
+project, the session can be restored with `vim -S .vim`.
