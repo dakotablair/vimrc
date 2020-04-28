@@ -3,10 +3,11 @@ set paste
 set nowrap
 
 " cursor settings
-set cursorcolumn
-set cursorline
+au WinLeave * set nocursorline nocursorcolumn
+au WinEnter * set cursorline cursorcolumn
 
 " key mappings
+noremap <F1> :ALEFix eslint<CR>
 noremap <F9> :tabp<CR>
 noremap <F10> :tabn<CR>
 set backspace=2
