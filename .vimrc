@@ -28,9 +28,19 @@ highlight Comment term=bold
 	\ cterm=NONE ctermfg=Magenta ctermbg=NONE
 	\ gui=NONE guifg=Magenta guibg=NONE
 
+" ALE configuration
+let g:ale_fixers = {
+	\ '*': ['remove_trailing_lines', 'trim_whitespace'],
+	\ 'javascript': ['eslint', 'prettier'],
+\}
+let g:ale_fix_on_save = 1
+
 "" custom commands
 " Show <var> displays the value of the variable var
 command! -nargs=+ Show :set <args>?
 
 "common on the fly commands
 "setf filetype
+
+" .vimrc work in progress
+source ~/sandbox.vim
