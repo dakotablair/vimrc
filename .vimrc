@@ -43,4 +43,6 @@ command! -nargs=+ Show :set <args>?
 "setf filetype
 
 " .vimrc work in progress
-source ~/sandbox.vim
+if filereadable(expand($VIM_SANDBOX))
+	source $VIM_SANDBOX
+endif
