@@ -28,14 +28,22 @@ highlight Comment term=bold
 	\ cterm=NONE ctermfg=Magenta ctermbg=NONE
 	\ gui=NONE guifg=Magenta guibg=NONE
 
+"" Plugin configuration
+" Read help files
+" helptags ALL
+
 " ALE configuration
 let g:ale_fixers = {
 	\ '*': ['remove_trailing_lines', 'trim_whitespace'],
 	\ 'javascript': ['eslint', 'prettier'],
 \}
 let g:ale_fix_on_save = 1
+let g:ale_html_tidy_options = '-q -e -language en -config $VIM_TIDYCONFIG'
 
 "" custom commands
+" Disable and Enable ALE
+command AR ALEDisable|ALEEnable
+
 " Show <var> displays the value of the variable var
 command! -nargs=+ Show :set <args>?
 
